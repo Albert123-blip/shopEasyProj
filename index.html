@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopEasy: quality products at fair prices.">
+    <title>ShopEasy-Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+    <header>
+        <a href="#home" class="brand">
+            <img src="logo.png" alt="ShopEasy logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart" class="open-cart-link">Cart</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <button class="cart-container" id="cart-container" aria-label="Open shopping cart" aria-controls="cart-drawer">
+            <img src="cart-icon.png" alt="">
+            <span class="cart-count" id="cart-count">0</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-copy">
+                <h1>Shop Smarter.<span class="live-better">Live Better.</span></h1>
+                <p>Discover amazing products at unbeatable prices.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="shopping-Btn">
+                        <img src="shopping-cart.png" alt="">Start Shopping
+                    </a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="headphones-transparent.png" alt="Black over-ear headphones">
+            </div>
+        </section>
+
+        <div class="shop-container">
+
+            <section class="search-section">
+                <div class="search-heading">
+                    <h2>Find Your Favorite Products</h2>
+                    <p>Search through our collection and find something you love.</p>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" placeholder="Search for products..." id="search-input" aria-label="Search products">
+                    <button id="search-btn" class="search-btn">Search</button>
+                </div>
+            </section>
+
+            <section class="products-section" id="products">
+                <div class="products-head">
+                    <h2>Our Products</h2>
+                </div>
+
+                <div class="card-grid" id="card-grid"></div>
+            </section>
+        </div>
+
+        <section class="about-us" id="about">
+            <div class="story-grid">
+                <div class="copy">
+                    <h2>About ShopEasy</h2>
+                    <p class="tagline">Shop Smarter. Live Better.</p>
+                    <p>
+                        At ShopEasy, we believe shopping should be simple, enjoyable, and fairly priced. We started with one idea: everyone deserves quality products without the hassle or the high price tag.
+                    </p>
+                    <p>
+                        From wireless earbuds and keyboards to kitchen essentials and desk gear, we carefully pick products that fit your lifestyle and make your days a little easier.
+                    </p>
+                </div>
+
+                <aside class="quote">
+                    <h3>What we stand for</h3>
+                    <ul>
+                        <li><strong>Quality you can trust.</strong> Every product in our store is chosen for its performance, durability, and value.</li>
+                        <li><strong>Prices that make sense.</strong> We keep our prices fair, so you get more for your money.</li>
+                        <li><strong>Shopping made easy.</strong> Browse, add to cart, and check out in a few clicks, with no stress and no confusion.</li>
+                        <li><strong>Customers first.</strong> Your satisfaction matters most to us, and we’re here to help every step of the way.</li>
+                    </ul>
+                    <p>Whether you’re upgrading your tech, setting up your home, or finding the perfect gift, ShopEasy is here to make it easy.</p>
+                    <p><strong>Welcome to ShopEasy. Let’s make shopping better, together.</strong></p>
+                </aside>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <p class="footer-logo">Shop<span>Easy</span></p>
+                    <p>Shop smarter. Live better.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#cart" class="open-cart-link">Shopping Cart</a>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: support@shopeasy.com</p>
+                    <p>Phone: +234 817 163 1398</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShopEasy. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+  
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+        <div class="drawer-head">
+            <h2 id="drawer-title">Your Cart</h2>
+            <button class="drawer-close" id="drawer-close" aria-label="Close cart">&times;</button>
+        </div>
+
+        <div class="drawer-body">
+            <p class="cart-empty" id="cart-empty">Your cart is empty. Add something from the products page.</p>
+            <ul class="cart-list" id="cart-list"></ul>
+        </div>
+
+        <div class="drawer-foot">
+            <p class="cart-total" id="cart-total"></p>
+            <button class="checkout-btn hidden" id="checkout-btn">Checkout</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="lightbox hidden" id="lightbox">
+        <button id="lightbox-close" aria-label="Close image preview">&times;</button>
+        <img id="lightbox-img" alt="">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
